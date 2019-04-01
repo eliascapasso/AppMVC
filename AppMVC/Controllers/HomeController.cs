@@ -14,13 +14,8 @@ namespace AppMVC.Controllers
             return View();
         }
 
-        public ActionResult BtnCargarImagenDni()
-        {
-            return View("Index");
-        }
-
         [HttpPost]
-        public ActionResult BtnCargarImagenDni(HttpPostedFileBase file)
+        public ActionResult Index(HttpPostedFileBase file)
         {
             SubirArchivoModelo modelo = new SubirArchivoModelo();
             if (file != null){
@@ -32,7 +27,7 @@ namespace AppMVC.Controllers
                 ViewBag.correcto = modelo.Confirmacion;
             }
 
-            return View("Index");
+            return View();
         }
 
        
