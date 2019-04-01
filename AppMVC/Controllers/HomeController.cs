@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AppMVC.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -15,9 +16,21 @@ namespace AppMVC.Controllers
 
         public ActionResult BtnCargarImagenDni()
         {
-            //Implementar logica de la carga de la imagen
+            return View("Index");
+        }
 
-            //ViewBag.ImagenDNI = "Imagen del dni";
+        [HttpPost]
+        public ActionResult BtnCargarImagenDni(HttpPostedFileBase file)
+        {
+            SubirArchivoModelo modelo = new SubirArchivoModelo();
+            if (file != null){
+                String ruta = Server.MapPath("~/Temp/");
+                ruta += file.FileName;
+
+                modelo.SubirArchivo(ruta, file);
+                ViewBag.error = modelo.error;
+                ViewBag.correcto = modelo.Confirmacion;
+            }
 
             return View("Index");
         }
