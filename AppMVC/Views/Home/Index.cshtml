@@ -33,18 +33,11 @@
                         <div class="col-md-2">
                             <label for="dni_dif">DNI del difunto</label>
                         </div>
-                        <div class="col-md-2">
-                            <input type="text" name="NombreImgDniDifunto" value="Nombre del archivo" readonly>
-                        </div>
-                        <div class="col-md-1">
-                            <button type="button" onclick="location.href='@Url.Action("BtnCargarImagenDni", "Home")'">
-                                Cargar imagen
-                            </button>
+                        <div class="col-md-3">
+                            <input type="file" name="NombreImgDniDifunto" accept="image/png, image/jpeg, application/pdf">
                         </div>
                         <div class="col-md-2">
-                            <button onclick="location.href='@Url.Action("ActionName", "ControllerName")'">
-                                Ver
-                            </button>
+                            <button type="submit">Ver</button>
                         </div>
                             <h3>@ViewBag.ImagenDNI</h3>
                         </div>
@@ -65,9 +58,6 @@
                         </div>  
                         <div class="col-md-3">
                             <input type="file" name="ArchivoDniContratante" accept="image/png, image/jpeg, application/pdf">
-                        </div>
-                        <div class="col-md-2">
-                            <button type="submit">Ver</button>
                         </div>
                     </div>
                     <div class="row">

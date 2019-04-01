@@ -1,0 +1,15 @@
+CREATE DATABASE AppMVC
+
+CREATE TABLE Documento(
+   id_documento INT,
+   dni_difunto VARCHAR,
+   certificado_defuncion VARCHAR,
+   dni_contratante VARCHAR,
+   declaracion_jurada VARCHAR,
+   permiso_inhumacion VARCHAR,
+   formulario_607 VARCHAR,
+   acreditacion_vinculo VARCHAR,
+   dni_vinculante VARCHAR,
+   autorizacion_cremacion VARCHAR,
+   PRIMARY KEY( id_documento )
+);
