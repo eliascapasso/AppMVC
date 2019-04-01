@@ -15,7 +15,7 @@ namespace AppMVC.Models
         {
             try
             {
-                file.SaveAs(ruta);
+                file.SaveAs(ruta); 
                 this.Confirmacion = "Imagen guardada";
             }
             catch (Exception e)
