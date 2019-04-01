@@ -1,0 +1,78 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<link href="~/Content/style.css" rel="stylesheet" type="text/css">
+
+<div>
+    <!-- Nav tabs -->
+    <ul class="nav nav-tabs" role="tablist">
+        <li id="l1" class="active"><a href="#servicios" aria-controls="servicios" role="tab" data-toggle="tab">Servicios</a></li>
+        <li id="l2"><a href="#documentos" aria-controls="documentos" role="tab" data-toggle="tab">Documentos</a></li>
+    </ul>
+
+    <!-- Tab panes -->
+    <div class="tab-content">
+        <div role="tabpanel" class="tab-pane active" id="servicios">
+        AQUI SE MUESTRAN LOS SERVICIOS
+        </div>
+
+        <div role="tabpanel" class="tab-pane" id="documentos">
+            <div>
+                <b>
+                    <u>
+                        ASESORIA
+                    </u>
+                </b>
+            </div>
+
+            <form action="/my-handling-form-page" method="post">
+                <div>
+                    <label for="dni_dif">DNI del difunto</label>
+                    <button type="button" onclick="location.href='@Url.Action("BtnCargarImagenDni", "Home")'">
+                    Cargar imagen
+                    </button>
+                    <button onclick="location.href='@Url.Action("ActionName", "ControllerName")'">
+                        Ver
+                    </button>
+
+                    <h3>@ViewBag.ImagenDNI</h3>
+                </div>
+                <div>
+                    <label for="cert">Certificado de defunción</label>
+                    <button type="submit">Cargar imagen</button>
+                    <button type="submit">Ver</button>
+                </div>
+                <div>
+                    <label for="dni_contr">DNI del contratante</label>
+                    <button type="submit">Cargar imagen</button>
+                </div>
+                <div>
+                    <label for="decl_jurada">Declaración jurada</label>
+                    <button type="submit">Cargar imagen</button>
+                </div>
+                <div>
+                    <label for="permiso">Permiso de inhumación</label>
+                    <button type="submit">Cargar imagen</button>
+                </div>
+                <div>
+                    <label for="form607">Formulario 607</label>
+                    <button type="submit">Cargar imagen</button>
+                </div>
+                <div>
+                    <label for="acreditacion">Acreditación del vinculo</label>
+                    <button type="submit">Cargar imagen</button>
+                </div>
+                <div>
+                    <label for="dni_vinc">DNI vinculante</label>
+                    <button type="submit">Cargar imagen</button>
+                </div>
+                <div>
+                    <label for="aut_crem">Autorización de cremación</label>
+                    <button type="submit">Cargar imagen</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+</div>
