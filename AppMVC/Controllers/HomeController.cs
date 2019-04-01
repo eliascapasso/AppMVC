@@ -23,6 +23,8 @@ namespace AppMVC.Controllers
                 ruta += file.FileName;
 
                 modelo.SubirArchivo(ruta, file);
+
+                ViewBag.ruta = ruta;
                 ViewBag.error = modelo.error;
                 ViewBag.correcto = modelo.Confirmacion;
             }
@@ -30,7 +32,11 @@ namespace AppMVC.Controllers
             return View();
         }
 
-       
+        public ActionResult Ver()
+        {
+            return View();
+        }
+
         public ActionResult About()
         {
             ViewBag.Message = "Your application description page.";
