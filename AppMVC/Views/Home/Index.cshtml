@@ -27,61 +27,62 @@
             </div>
 
             <form action="/my-handling-form-page" method="post">
-                <div>
-                    <label for="dni_dif">DNI del difunto</label>
-                    <input type="text" name="NombreImgDniDifunto" value="Nombre del archivo" readonly>
-                    <button type="button" onclick="location.href='@Url.Action("BtnCargarImagenDni", "Home")'">
-                    Cargar imagen
-                    </button>
-                    <button onclick="location.href='@Url.Action("ActionName", "ControllerName")'">
-                        Ver
-                    </button>
+                <div class="container">
+                    <div>
+                        <label for="dni_dif">DNI del difunto</label>
+                        <input type="text" name="NombreImgDniDifunto" value="Nombre del archivo" readonly>
+                        <button type="button" onclick="location.href='@Url.Action("BtnCargarImagenDni", "Home")'">
+                            Cargar imagen
+                        </button>
+                        <button onclick="location.href='@Url.Action("ActionName", "ControllerName")'">
+                            Ver
+                        </button>
 
-                    <h3>@ViewBag.ImagenDNI</h3>
-                </div>
-                <div>
-                    <label for="cert">Certificado de defunción</label>
-                    <input type="text" name="NombreArchivoDefuncion" value="Nombre del archivo" readonly>
-                    <button type="submit">Cargar imagen</button>
-                    <button type="submit">Ver</button>
-                </div>
-                <div>
-                    <label for="dni_contr">DNI del contratante</label>
-                    <input type="text" name="NombreArchivoDniContratante" value="Nombre del archivo" readonly>
-                    <button type="submit">Cargar imagen</button>
-                </div>
-                <div>
-                    <label for="decl_jurada">Declaración jurada</label>
-                    <input type="text" name="NombreArchivoDniContratante" value="Nombre del archivo" readonly>
-                    <button type="submit">Cargar imagen</button>
-                </div>
-                <div>
-                    <label for="permiso">Permiso de inhumación</label>
-                    <input type="text" name="NNombreArchivoDniContratante" value="Nombre del archivo" readonly>
-                    <button type="submit">Cargar imagen</button>
-                </div>
-                <div>
-                    <label for="form607">Formulario 607</label>
-                    <input type="text" name="NombreArchivoFormulario607" value="Nombre del archivo" readonly>
-                    <button type="submit">Cargar imagen</button>
-                </div>
-                <div>
-                    <label for="acreditacion">Acreditación del vinculo</label>
-                    <input type="text" name="NombreArchivoAcreditacionVinculo" value="Nombre del archivo" readonly>
-                    <button type="submit">Cargar imagen</button>
-                </div>
-                <div>
-                    <label for="dni_vinc">DNI vinculante</label>
-                    <input type="text" name="NombreArchivoDniVinculante" value="Nombre del archivo" readonly>
-                    <button type="submit">Cargar imagen</button>
-                </div>
-                <div>
-                    <label for="aut_crem">Autorización de cremación</label>
-                    <input type="text" name="NombreArchivoAutorizacionCremacion" value="Nombre del archivo" readonly>
-                    <button type="submit">Cargar imagen</button>
-                </div>
-                <div>
-                    <input type="checkbox" name="PendienteDocumentacion"> Pendiente de Documentación<br>
+                        <h3>@ViewBag.ImagenDNI</h3>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <label for="cert">Certificado de defunción</label>
+                        </div>
+                        <div class="col">
+                            <input type="file" name="ArchivoDefuncion" accept="image/png, image/jpeg, application/pdf">
+                        </div>
+                        <div class="col">
+                            <button type="submit">Ver</button>
+                        </div>
+                    </div>
+                    <div>
+                        <label for="dni_contr">DNI del contratante</label>
+                        <input type="file" name="ArchivoDniContratante" accept="image/png, image/jpeg, application/pdf">
+                        <button type="submit">Ver</button>
+                    </div>
+                    <div>
+                        <label for="decl_jurada">Declaración jurada</label>
+                        <input type="file" name="ArchivoDeclaracionJurada" accept="image/png, image/jpeg, application/pdf">
+                    </div>
+                    <div>
+                        <label for="permiso">Permiso de inhumación</label>
+                        <input type="file" name="ArchivoPermisoInhumacion" accept="image/png, image/jpeg, application/pdf">
+                    </div>
+                    <div>
+                        <label for="form607">Formulario 607</label>
+                        <input type="file" name="ArchivoFormulario607" accept="image/png, image/jpeg, application/pdf">
+                    </div>
+                    <div>
+                        <label for="acreditacion">Acreditación del vinculo</label>
+                        <input type="file" name="ArchivoAcreditacionVinculo" accept="image/png, image/jpeg, application/pdf">
+                    </div>
+                    <div>
+                        <label for="dni_vinc">DNI vinculante</label>
+                        <input type="file" name="ArchivoDniVinculante" accept="image/png, image/jpeg, application/pdf">
+                    </div>
+                    <div>
+                        <label for="aut_crem">Autorización de cremación</label>
+                        <input type="file" name="ArchivoAutorizacionCremacion" accept="image/png, image/jpeg, application/pdf">
+                    </div>
+                    <div>
+                        <input type="checkbox" name="PendienteDocumentacion"> Pendiente de Documentación<br>
+                    </div>
                 </div>
             </form>
         </div>
