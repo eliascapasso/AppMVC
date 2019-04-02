@@ -1,5 +1,5 @@
 ﻿@{
-    ViewBag.Title = "Home Page";
+    ViewBag.Title = "Index";
 }
 
 <link href="~/Content/style.css" rel="stylesheet" type="text/css">
@@ -27,7 +27,7 @@
             </div>
 
             <form action="/my-handling-form-page" method="post">
-                    
+                <!-- DNI DEL DIFUNTO -->    
                 <div class="container">
                     <div class="row">
                         <div class="col-md-2">
@@ -37,10 +37,11 @@
                             <input type="file" name="NombreImgDniDifunto" accept="image/png, image/jpeg, application/pdf">
                         </div>
                         <div class="col-md-2">
-                            <button type="submit">Ver</button>
+                            <button type="button" onclick="location.href = '@Url.Action("Ver", "Home")'">Botón</button>
                         </div>
-                            <h3>@ViewBag.ImagenDNI</h3>
-                        </div>
+                    </div>
+
+                    <!-- CERTIFICADO DE DEFUNCION -->  
                     <div class="row">
                         <div class="col-md-2">
                             <label for="cert">Certificado de defunción</label>
@@ -52,6 +53,8 @@
                             <button type="submit">Ver</button>
                         </div>
                     </div>
+
+                    <!-- DNI DEL CONTRATANTE -->  
                     <div class="row">
                         <div class="col-md-2">
                             <label for="dni_contr">DNI del contratante</label>
@@ -60,6 +63,8 @@
                             <input type="file" name="ArchivoDniContratante" accept="image/png, image/jpeg, application/pdf">
                         </div>
                     </div>
+
+                    <!-- DECLARACION JURADA -->  
                     <div class="row">
                         <div class="col-md-2">
                             <label for="decl_jurada">Declaración jurada</label>
@@ -67,8 +72,9 @@
                         <div class="col-md-3">
                             <input type="file" name="ArchivoDeclaracionJurada" accept="image/png, image/jpeg, application/pdf">
                         </div>
-                            
                     </div>
+
+                    <!-- PERMISO DE INHUMACION -->  
                     <div class="row">
                         <div class="col-md-2">
                             <label for="permiso">Permiso de inhumación</label>
@@ -76,8 +82,9 @@
                         <div class="col-md-3">
                             <input type="file" name="ArchivoPermisoInhumacion" accept="image/png, image/jpeg, application/pdf">
                         </div>
-                            
                     </div>
+
+                    <!-- FORMULARIO 607 -->  
                     <div class="row">
                         <div class="col-md-2">
                             <label for="form607">Formulario 607</label>
@@ -85,8 +92,9 @@
                         <div class="col-md-3">
                             <input type="file" name="ArchivoFormulario607" accept="image/png, image/jpeg, application/pdf">
                         </div>
-                           
                     </div>
+
+                    <!-- ACREDITACION DEL VINCULO -->  
                     <div class="row">
                         <div class="col-md-2">
                             <label for="acreditacion">Acreditación del vinculo</label>
@@ -94,17 +102,19 @@
                         <div class="col-md-3">
                             <input type="file" name="ArchivoAcreditacionVinculo" accept="image/png, image/jpeg, application/pdf">
                         </div>
-                            
                     </div>
+
+                    <!-- DNI DEL VINCULANTE -->  
                     <div class="row">
                         <div class="col-md-2">
-                            <label for="dni_vinc">DNI vinculante</label>
+                            <label for="dni_vinc">DNI del vinculante</label>
                         </div>
                         <div class="col-md-3">
                             <input type="file" name="ArchivoDniVinculante" accept="image/png, image/jpeg, application/pdf">
                         </div>
-                            
                     </div>
+
+                    <!-- AUTORIZACION DE CREMACION -->  
                     <div class="row">
                         <div class="col-md-2">
                             <label for="aut_crem">Autorización de cremación</label>
@@ -113,6 +123,13 @@
                             <input type="file" name="ArchivoAutorizacionCremacion" accept="image/png, image/jpeg, application/pdf">
                         </div>
                     </div>
+
+                    <!-- Agregar documentación -->
+                    <div class="row">
+                        <input class="btn btn-success" type="submit" value="Agregar documentación" /> 
+                    </div>
+
+                    <!-- PENDIENTE DE DOCUMENTACION -->  
                     <div class="row">
                         <input type="checkbox" name="PendienteDocumentacion"> Pendiente de Documentación<br>
                     </div>

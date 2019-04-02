@@ -4,51 +4,29 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using AppMVC.Models;
 
 namespace AppMVC.Controllers
 {
     public class HomeController : Controller
     {
+        DocumentoBL _bl = new DocumentoBL();
+
         public ActionResult Index()
         {
             return View();
         }
 
         [HttpPost]
-        public ActionResult Index(HttpPostedFileBase file)
+        public ActionResult Agregar(DocumentoEN dEN)
         {
-            SubirArchivoModelo modelo = new SubirArchivoModelo();
-            if (file != null){
-                String ruta = Server.MapPath("~/Temp/");
-                ruta += file.FileName;
-
-                modelo.SubirArchivo(ruta, file);
-
-                ViewBag.ruta = ruta;
-                ViewBag.error = modelo.error;
-                ViewBag.correcto = modelo.Confirmacion;
-            }
-
-            return View();
+            _bl.AgregarDocumento(dEN);
+            return RedirectToAction ("Index");
         }
 
         public ActionResult Ver()
         {
-            return View();
-        }
-
-        public ActionResult About()
-        {
-            ViewBag.Message = "Your application description page.";
-
-            return View();
-        }
-
-        public ActionResult Contact()
-        {
-            ViewBag.Message = "Your contact page.";
-
-            return View();
+            return View("Ver");
         }
     }
 }
